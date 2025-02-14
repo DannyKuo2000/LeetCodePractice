@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        final_ListNode = ListNode()
+        final_ListNode = ListNode() # 創建的是前一個node，這樣方便處理最後進位問題
         current = final_ListNode
         carry = 0
 
