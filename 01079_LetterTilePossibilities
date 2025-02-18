@@ -1,0 +1,31 @@
+class Solution:
+    def numTilePossibilities(self, tiles: str) -> int:
+        tileType = []
+        num = []
+        for i in range(0, len(tiles)):
+            try:
+                tileType.index(tiles[i])
+                num[tileType.index(tiles[i])] += 1
+            except ValueError:
+                tileType.append(tiles[i])
+                num.append(1)
+            print(tileType)
+            print(num)
+    
+
+    # 如何處理所有組合是大問題
+    def combination(self, num):
+        numTiles = sum(num) # 字母總數
+        for a in range(1, numTiles + 1):
+            for letterType in range(0, len(num)):
+                return
+                
+
+    def permutation(self, num):
+        return
+    def factorial(self, n):
+        num = 1
+        while n >= 0:
+            num *= n
+            n -= 1
+        return num 
