@@ -12,6 +12,7 @@ class Solution:
             print(tileType)
             print(num)
     
+    
 
     # 如何處理所有組合是大問題
     def combination(self, num):
