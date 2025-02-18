@@ -1,6 +1,7 @@
 class Solution:
     def smallestNumber(self, pattern: str) -> str:
         '''
+        Main method:
         counting how many D in each region devided by I:
         '''
         record = []
