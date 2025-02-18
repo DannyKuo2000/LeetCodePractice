@@ -1,0 +1,22 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        elif x == 0:
+            return True
+        else:
+            s = []
+            counter = 0
+            while x > 0:
+                counter += 1
+                num = x % 10
+                s.append(num)
+                # preparation for next iter
+                x = x - num
+                x = x / 10
+
+            head = 0
+            tail = counter - 1
+            while True:
+                if s[head] == s[tail]:
+                    
