@@ -5,18 +5,14 @@ class Solution:
         elif x == 0:
             return True
         else:
-            s = []
-            counter = 0
-            while x > 0:
-                counter += 1
-                num = x % 10
-                s.append(num)
-                # preparation for next iter
-                x = x - num
-                x = x / 10
-
+            x_str = str(x)
             head = 0
-            tail = counter - 1
-            while True:
-                if s[head] == s[tail]:
+            tail = len(x_str) - 1
+            while head < tail:
+                if x_str[head] != x_str[tail]:
+                    return False
+                else:
+                    head += 1
+                    tail -= 1
+            return True
                     
