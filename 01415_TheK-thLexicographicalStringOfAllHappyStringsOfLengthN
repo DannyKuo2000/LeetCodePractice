@@ -1,0 +1,49 @@
+class Solution:
+    def getHappyString(self, n: int, k: int) -> str:
+        
+        outputNumber = []
+
+        # construct first
+        counter = 0
+        for i in range(0, n):
+            outputNumber.append(counter % 2)
+            counter += 1
+        if k == 1:
+            return changeToLetter(outputNumber)
+        
+
+        '''
+        Main method: 用二進位表示這個數字，一直+1直到符合規則
+        '''
+        # using label to mark the choose which letter to change
+        flag = True
+        while flag == True:
+            outputNumber[k - 1] += 1 # +1
+            # handle carry
+            label = k - 1           
+            while True:
+                if outputNumber[label] % 3 == 0:
+                    label -= 1
+
+            # check if satisfy the condition
+            flag = True
+            head = n - 2
+            tail = n - 1
+            while head >= 0 and tail >= 0:
+                if outputNumber[head] % 3 == outputNumber[tail] % 3:
+                    head -= 1                            
+                    tail -= 1
+                else:
+                    flag = False
+
+            
+        return
+                    
+
+
+    def changeToLetter(self, outputNumber):
+        letter = ['a', 'b', 'c']
+        outputLetter = []
+        for i in range(0, len(outputNumber)):
+            outputLetter.append(letter[outputNumber[i]])
+        return ''.join(outputLetter)
