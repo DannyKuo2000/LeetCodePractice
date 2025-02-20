@@ -1,0 +1,28 @@
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        new_string = [' '] * len(s)
+        new_label = 0
+
+        for i in range(0, numRows):
+            flag = 0 # counting for step
+            step = [2*(numRows - i - 1), i * 2] # step size between two word by observation
+            old_label = i 
+            
+
+
+            while old_label <= len(s) - 1:
+                print(new_label, old_label)
+                print(new_string)
+                print(flag)
+                new_string[new_label] = s[old_label]
+
+                # prepare for next loop
+                if step[flag % 2] != 0:
+                    old_label = old_label + step[flag % 2]
+                    new_label = new_label + 1
+                flag += 1
+        
+        return ''.join(new_string)
+
