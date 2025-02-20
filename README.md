@@ -1,6 +1,6 @@
 Define the commit message:
 - Not finished:
-    Message: "time + percentage" + Not finished
+    Message: Not finished
 - Finished but time complexity order is not optimize:
     Message: "time + percentage" + Not optimizing time complexity
 - Finished but time performance has room to improve
