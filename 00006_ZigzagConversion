@@ -8,7 +8,7 @@ class Solution:
         for i in range(0, numRows):
             flag = 0 # counting for step
             step = [2*(numRows - i - 1), i * 2] # step size between two word by observation
-            old_label = i
+            old_label = i 
             
 
 
