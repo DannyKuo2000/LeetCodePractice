@@ -9,7 +9,7 @@ class Solution:
                 tail = i + 2
             else: # 中心點在字中間
                 head = i - 1
-                tail = i + 1
+                tail = i + 1 
 
 
             while head >= 0 and tail <= len(s) * 2 - 1:
